@@ -1,6 +1,6 @@
 # pv-remote-display
 
-## Remote Statusanzeige für Photovoltaik Anlage
+## Remote Statusanzeige für Photovoltaik Anlagen
 Dieses Projekt wurde initiiert um die Werte von openDTU auf einen Remote Display darzustellen. 
 Grundsätzlich sind aber alle Werte, die per MQTT verfügbar sind, anzeigbar.
 
