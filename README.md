@@ -6,6 +6,10 @@ Grundsätzlich sind aber alle Werte, die per MQTT verfügbar sind, anzeigbar.
 
 ![Remote-Display](/images/Remote-Display-Front.jpg)
 
+# Funktionsweise
+Die Daten des Hoymiles Wechselrichters und des Shelly3EM werden im openDTU gesammelt und an den MQTT-Broker geschickt. Das Remote Display holt sich diese Daten von dem MQTT-Broker und stellt sie mit Hilfe von ESPEasy dar. Das Remote Display ist aber nicht an diese Konfiguration gebunden. Im Prinzip können alle Daten die per MQTT verfügbar sind dargestellt werden.
+
+![MQTT-Broker](/images/MQTT-Broker.PNG)
 
 # Hardware
 Was wird benötigt
@@ -101,6 +105,8 @@ Jetzt legen wir das Device in ESPEasy unter **Device**, dann **Add** drücken un
 
 # Konfiguration MQTT Import
 Nun werden die Devices zum Import der openDTU Werte angelegt. Das machen wir unter **Device**, dann **Add** drücken und ein Device **Generic - MQTT Import** anlegen.
+
+Eine gute Hilfe die richtigen MQTT Werte zu finden ist der frei erhältliche [MQTT-Explorer](https://github.com/thomasnordquist/MQTT-Explorer/releases) 
 
 ![MQTT-Import1](/images/MQTT-Import1.PNG)
 
