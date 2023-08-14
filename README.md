@@ -50,7 +50,7 @@ Von dem ST7735S gibt es diverse Ausführungen. Hier die Verdrahtung meines ST773
 # Software
 1. Als Software auf dem Wemos D1 Mini wird [ESPEasy](https://github.com/letscontrolit/ESPEasy) von LETS CONTROL IT verwendet. Hier das neuste Release herunterladen und die Datei ESP_Easy_mega_xxxxxxxx_**display**_ESP8266_4M1M.bin verwenden
 2. Am einfachsten geht das flashen mit [NodeMCU-PyFlasher](https://github.com/marcelstoer/nodemcu-pyflasher/releases)
-3. Nach dem Neustart mit dem WLAN **Display** verbinden. Kennwort: **configesp**
+3. Nach dem Neustart mit dem WLAN Name: **"Display"** verbinden. Kennwort: **configesp**
 4. Jetzt die Daten für das lokalen WLAN eingeben
 5. Neustart und eine Verbindung mit ESPEasy über dem Browser herstellen. Es sollte mit http://display funktionieren. Wenn das nicht funktioniert, dann die IP-Adresse im DHCP Menü eures Routers rausfinden (bei der Fritzbox unter Heimnetz/Netzwerk) 
 6. Im ESPEasy Menü unter **Tools** und dann **Advanced** folgende Einstellungen vornehmen:
