@@ -91,6 +91,8 @@ Jetzt legen wir das Device in ESPEasy unter **Device** an. Dann **Add** drücken
 
 ![Display-Config](/images/Config-Display.PNG)
 
+Jetzt noch die Werte eintragen.
+
 |Variable|Eintrag|
 |---|---|
 |Name:|ST7735S|
