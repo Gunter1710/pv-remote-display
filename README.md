@@ -126,6 +126,8 @@ Eine gute Hilfe die richtigen MQTT Werte zu finden ist der frei erhältliche [MQ
 |3|ac/power|power|
 |4|victron/HQxxxxxxKRR/PPV|V|
 
+* Die Nummer eueres Victron MTTP müsst ihr entsprechend eingeben
+
 |Values|Name|Decimals|
 |---|---|---|
 |1|Batt|1|
@@ -150,6 +152,8 @@ Da wir pro MQTT Import Device nur 4 Topics anlegen dürfen muss noch ein zweites
 |1|114xxxxxxxxx/status/limit_absolute|limit_absolute|
 |2|114xxxxxxxxx/0/yieldday|yieldday|
 |3|victron/HQxxxxxxKRR/H20|H20|
+
+* Ihr müsst die Seriennummer eures Hoymiles Wechselrichters eintragen
 
 |Values|Name|Decimals|
 |---|---|---|
