@@ -87,7 +87,7 @@ Um eine Verbindung von ESPEasy und dem MQTT-Broker herzustellen muss über den R
 
 
 # Konfiguration Display
-Jetzt legen wir das Device in ESPEasy unter **Device**, dann **Add** drücken und ein Device **Display - ST77xx TFT** anlegen.
+Jetzt legen wir das Device in ESPEasy unter **Device** an. Dann **Add** drücken und ein Device **Display - ST77xx TFT** anlegen.
 
 ![Display-Config](/images/Config-Display.PNG)
 
