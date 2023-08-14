@@ -64,7 +64,7 @@ Von dem ST7735S gibt es diverse Ausführungen. Hier die Verdrahtung meines ST773
 
 
 # Konfiguration Hardware
-Nun muss ESPEasy konfiguriert werden. Als erstes müssen die voreingestellten GPIOs für das I2C Interface entfernt werden.
+Nun muss ESPEasy konfiguriert werden. Als erstes müssen die voreingestellten GPIOs für das I2C Interface entfernt und SPI für das Display aktiviert werden.
 
 |Variable|Eintrag|
 |---|---|
