@@ -147,7 +147,7 @@ Da wir pro MQTT Import Device nur 4 Topics anlegen dürfen muss noch ein zweites
 
 |MQTT Topic|Topic|JSON Attribute|
 |---|---|---|
-|1|114181027126/status/limit_absolute|limit_absolute|
+|1|114xxxxxxxxx/status/limit_absolute|limit_absolute|
 |2|114xxxxxxxxx/0/yieldday|yieldday|
 |3|victron/HQxxxxxxKRR/H20|H20|
 
