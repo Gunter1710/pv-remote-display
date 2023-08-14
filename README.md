@@ -44,12 +44,12 @@ Von dem ST7735S gibt es diverse Ausführungen. Hier die Verdrahtung meines ST773
 
 
 # Software
-1. Als Software auf dem Wemos D1 Mini wird [ESPEasy](https://github.com/letscontrolit/ESPEasy) von LETS CONTROL IT verwendet.Hier das neuste Release herunterladen und die Datei ESP_Easy_mega_xxxxxxxx_display_ESP8266_4M1M.bin verwenden
+1. Als Software auf dem Wemos D1 Mini wird [ESPEasy](https://github.com/letscontrolit/ESPEasy) von LETS CONTROL IT verwendet. Hier das neuste Release herunterladen und die Datei ESP_Easy_mega_xxxxxxxx_display_ESP8266_4M1M.bin verwenden
 2. Am einfachten geht das flashen mit [NodeMCU-PyFlasher](https://github.com/marcelstoer/nodemcu-pyflasher/releases)
 3. Nach dem Neustart mit dem WLAN **Display** verbinden. Kennwort: **configesp**
-4. Jetzt eine Verbindung mit dem lokalen WLAN herstellen
-5. Neustart und eine Verbindung mit ESPEsay über dem Browser herstellen
-6. Im ESPEasy unter **Tools** und dann **Advanced** folgende Einstellungen vornehmen:
+4. Jetzt die Daten für das lokalen WLAN eingeben
+5. Neustart und eine Verbindung mit ESPEsay über dem Browser herstellen. Es sollte mit http://display funktionieren. Wenn das nicht funktioniert, dann die IP-Adresse im DHCP Menü eures Routers rausfinden (bei der Fritzbox unter Heimnetz/Netzwerk) 
+6. Im ESPEasy Menü unter **Tools** und dann **Advanced** folgende Einstellungen vornehmen:
 
 |Variable|Eintrag|
 |---|---|
@@ -126,7 +126,6 @@ Nun werden die Devices zum Import der openDTU Werte angelegt. Das machen wir unt
 |4|PV|0|
 
 
-
 Da wir pro MQTT Import Device nur 4 Topics anlegen dürfen muss noch ein zweites  **Generic - MQTT Import** Device anlegelegt werden.
 
 ![MQTT-Import2](/images/MQTT-Import2.PNG)
@@ -143,13 +142,29 @@ Da wir pro MQTT Import Device nur 4 Topics anlegen dürfen muss noch ein zweites
 |1|114181027126/status/limit_absolute|limit_absolute|
 |2|114xxxxxxxxx/0/yieldday|yieldday|
 |3|victron/HQxxxxxxKRR/H20|H20|
-|4|||
 
 |Values|Name|Decimals|
 |---|---|---|
 |1|limit_absolute|0|
 |2|yieldday|0|
 |3|H20|3|
-|4|Value4|2|
+
+# Die ESPEasy Rules
+Mit Rules in ESPEasy kann man eventgetriggert das Display steuert. Die Rules findet ihr [hier](/Rule%20Set%201.txt). Einfach kopieren und in Rule Set 1 kopieren. 
+
+Achtung! Der Reiter **Rule** wur in ESPEasy nur angezeigt wenn vorher der Hacken unter **Tools/Advanced/Rules** gesetzt wurde
+
+Wer die Rules verändern will, oder eigene Rules schreiben will, wird bei ESPEasy fündig. [Display - ST77xx TFT](https://espeasy.readthedocs.io/en/latest/Plugin/P116.html) oder [Rules](https://espeasy.readthedocs.io/en/latest/Rules/Rules.html) im allgemeinen.
+
+# Verbesserungen
+Wie bei jedem Projekt gibt es immer Potential zur Verbesserung. Ihr seid herzlich gerne dazu eingeladen mir Vorschläge zur Optimierung zu schicken. 
+
+Optimierungsbedarf:
+- Im Moment wird der Bildschirm alle 10 Sekungen gelöscht. Das ist nötig, da teilweise alte Werte nicht komplett überschrieben werden. z.B. wenn PV eine Wert von 534W hat und bei der nächsten Messeung nur noch 46W, dann steht auf dem Display **PV:  46WW**. Ich suche noch einen eleganten Weg nur die alten Werte zu löschen und nicht den ganzen Bildschirm.
+- Das 1.8 TFT Display ist zwar ganz nett, aber ein 2.8' Bildschirm wäre schon besser abzulesen. Ich habe noch ein ILI9341 Display (ohne Touch) rumliegen. Vielleicht schaffe ich es in nächster Zeit das zu aktivieren
+- Der Wemos und das ST7735S sind ziemliche Stromfresser. Ich hätte gerne eine Version, die mit Batterie/Akku laufen kann.
+- In ESPEasy gibt es die Möglichkeit über einen Display-Button verschiedee Bildschirme anzuzeigen. Vorstellbar wäre z.B. Bildschirm aus, oder die einzelenen Werte der Strings/Phase, oder je ein Bildschirm pro Wechselrichter
 
 
+# Summary
+Mit hat das Projekt richtig Spass gemacht. 
