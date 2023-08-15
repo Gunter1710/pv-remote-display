@@ -161,8 +161,32 @@ Da wir pro MQTT Import Device nur 4 Topics anlegen dürfen muss noch ein zweites
 |2|yieldday|0|
 |3|H20|3|
 
+# Konfiguration Dummy Device
+Damit man berechnete Werte verarbeitet kann muss ein Dummy Device angelegt werde. In Rules Set 2 wird ein TOC für die Batterie berechnet, dieser Wert wird in das Dummy Device geschrieben.
+Um den Dummy anzulegen, öffnet man **Devices**, dann **Add** und wählt **Generic - Dummy Device** aus.
+
+![MQTT-Import2](/images/Dummy-Device.PNG)
+
+|Variable|Eintrag|
+|---|---|
+|Name:| Dummy|
+|Enable:|Yes|
+|Output Data Type:|Quad|
+
+Die Vaules werden erst sichtbar wenn man einmal **Submit** gedrückt hat
+
+|Values|Name|Decimals|
+|---|---|---|
+|1|TOC|0|
+
 # Die ESPEasy Rules
-Mit Rules in ESPEasy kann man Event getriggert das Display steuert. Die Rules findet ihr [hier](/Rule%20Set%201.txt). Einfach kopieren und in Rule Set 1 kopieren. 
+Mit Rules in ESPEasy kann man Event getriggert das Display steuert. 
+
+[Rule Set 1](/Rule%20Set%201.txt) beinhaltet die Display Ausgabe
+
+[Rule Set 2](/Rule%20Set%202.txt) berechnet den TOC der Batterie
+
+Einfach kopieren und in die Rule Sets des ESPEasy einfügen. 
 
 Achtung! Der Reiter **Rule** wird in ESPEasy nur angezeigt wenn vorher der Hacken unter **Tools/Advanced/Rules** gesetzt wurde
 
