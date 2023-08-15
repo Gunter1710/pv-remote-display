@@ -1,0 +1,27 @@
+On openDTU1#Batt do
+  if [openDTU1#Batt] > 29.2
+     TaskValueSet,4,1,110
+   elseif [openDTU1#Batt] > 27.2
+     TaskValueSet,4,1,100
+   elseif [openDTU1#Batt] > 26.8
+     TaskValueSet,4,1,90
+   elseif [openDTU1#Batt] > 26.6
+     TaskValueSet,4,1,80
+   elseif [openDTU1#Batt] > 26.4
+     TaskValueSet,4,1,70
+   elseif [openDTU1#Batt] > 26.2
+     TaskValueSet,4,1,60
+   elseif [openDTU1#Batt] > 26.1
+     TaskValueSet,4,1,50
+   elseif [openDTU1#Batt] > 26.0
+     TaskValueSet,4,1,40
+   elseif [openDTU1#Batt] > 25.8
+     TaskValueSet,4,1,30
+   elseif [openDTU1#Batt] > 25.6
+     TaskValueSet,4,1,20
+   elseif [openDTU1#Batt] > 24
+     TaskValueSet,4,1,10
+   else
+     TaskValueSet,4,1,0
+  endif
+endon
