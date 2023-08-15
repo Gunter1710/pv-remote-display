@@ -172,7 +172,7 @@ Wer die Rules verändern will, oder eigene Rules schreiben will, wird bei ESPEas
 Wie bei jedem Projekt gibt es immer Potential zur Verbesserung. Ihr seid herzlich gerne dazu eingeladen mir Vorschläge zur Optimierung zu schicken. 
 
 Optimierungsbedarf:
-- Im Moment wird der Bildschirm alle 10 Sekunden gelöscht. Das ist nötig, da teilweise alte Werte nicht komplett überschrieben werden. z.B. wenn PV einen Wert von 534W hat und bei der nächsten Messung nur noch 46W, dann steht auf dem Display **PV:  46WW**. Ich suche noch einen eleganten Weg nur die alten Werte zu löschen und nicht den ganzen Bildschirm.
+- ~~Im Moment wird der Bildschirm alle 10 Sekunden gelöscht. Das ist nötig, da teilweise alte Werte nicht komplett überschrieben werden. z.B. wenn PV einen Wert von 534W hat und bei der nächsten Messung nur noch 46W, dann steht auf dem Display **PV:  46WW**. Ich suche noch einen eleganten Weg nur die alten Werte zu löschen und nicht den ganzen Bildschirm.~~
 - Das 1.8 TFT Display ist zwar ganz nett, aber ein 2.8' Bildschirm wäre schon besser abzulesen. Ich habe noch ein ILI9341 Display (ohne Touch) rumliegen. Vielleicht schaffe ich es in nächster Zeit das zu aktivieren
 - Der Wemos und das ST7735S sind ziemliche Stromfresser. Ich hätte gerne eine Version, die mit Batterie/Akku laufen kann.
 - In ESPEasy gibt es die Möglichkeit über einen Display-Button verschiedene Bildschirme anzuzeigen. Vorstellbar wäre z.B. Bildschirm aus, oder die einzelnen Werte der Strings/Phase, oder je ein Bildschirm pro Wechselrichter
