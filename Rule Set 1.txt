@@ -5,51 +5,51 @@ On System#Boot do
 endon
 On Rules#Timer=1 do
   let,1,([openDTU2#yieldday]/1000)
-  st77xx,clear
-  st77xx,txtfull,2,22,2,white,,EVU:
+//  st77xx,clear
+  st77xx,txtfull,2,22,2,white,black,EVU:
 if [openDTU1#Netz] < -1000
-  st77xx,txtfull,55,22,2,green,black,"[openDTU1#Netz]W"
+  st77xx,txtfull,55,22,2,green,black,"[openDTU1#Netz]W   "
   st77xx,txtfull,2,1,2,white,green,"Balkonsolar"
 elseif [openDTU1#Netz] < 100
   st77xx,txtfull,2,1,2,white,Cyan,"Balkonsolar"
-  st77xx,txtfull,55,22,2,Cyan,black,"[openDTU1#Netz]W"
+  st77xx,txtfull,55,22,2,Cyan,black,"[openDTU1#Netz]W   "
 else
   st77xx,txtfull,2,1,2,white,red,"Balkonsolar"
-  st77xx,txtfull,55,22,2,red,black,"[openDTU1#Netz]W"
+  st77xx,txtfull,55,22,2,red,black,"[openDTU1#Netz]W   "
 endif
-  st77xx,txtfull,2,42,2,white,,WR:
+  st77xx,txtfull,2,42,2,white,black,WR:
 if [openDTU1#HM] < 13
-  st77xx,txtfull,55,42,2,orange,black,"[openDTU1#HM]W"
+  st77xx,txtfull,55,42,2,orange,black,"[openDTU1#HM]W   "
 elseif [openDTU1#HM] < 100
-  st77xx,txtfull,55,42,2,Cyan,black,"[openDTU1#HM]W"
+  st77xx,txtfull,55,42,2,Cyan,black,"[openDTU1#HM]W   "
 else
-  st77xx,txtfull,55,42,2,green,black,"[openDTU1#HM]W"
+  st77xx,txtfull,55,42,2,green,black,"[openDTU1#HM]W   "
 endif
-  st77xx,txtfull,2,62,2,white,,PV:
+  st77xx,txtfull,2,62,2,white,black,PV:
 if [openDTU1#PV] < 13
-  st77xx,txtfull,55,62,2,red,black,"[openDTU1#PV]W"
+  st77xx,txtfull,55,62,2,red,black,"[openDTU1#PV]W   "
 elseif [openDTU1#PV] < 250
-  st77xx,txtfull,55,62,2,Cyan,black,"[openDTU1#PV]W"
+  st77xx,txtfull,55,62,2,Cyan,black,"[openDTU1#PV]W   "
 else
-  st77xx,txtfull,55,62,2,green,black,"[openDTU1#PV]W"
+  st77xx,txtfull,55,62,2,green,black,"[openDTU1#PV]W   "
 endif
-  st77xx,txtfull,2,82,2,white,,Bat:
+  st77xx,txtfull,2,82,2,white,black,Bat:
 if [openDTU1#Batt] < 25.6
-  st77xx,txtfull,55,82,2,red,black,"[openDTU1#Batt]V"
+  st77xx,txtfull,55,82,2,red,black,"[openDTU1#Batt]V   "
 elseif [openDTU1#Batt] < 26.1
-  st77xx,txtfull,55,82,2,orange,black,"[openDTU1#Batt]V"
+  st77xx,txtfull,55,82,2,orange,black,"[openDTU1#Batt]V   "
 elseif [openDTU1#Batt] < 27.2
-  st77xx,txtfull,55,82,2,Cyan,black,"[openDTU1#Batt]V"
+  st77xx,txtfull,55,82,2,Cyan,black,"[openDTU1#Batt]V   "
 else
-  st77xx,txtfull,55,82,2,green,black,"[openDTU1#Batt]V"
+  st77xx,txtfull,55,82,2,green,black,"[openDTU1#Batt]V   "
 endif
-  st77xx,txtfull,2,105,1,white,,"WR Limit:"
-  st77xx,txtfull,60,105,1,white,,"[openDTU2#limit_absolute] W"
-  st77xx,txtfull,2,115,1,white,,"WR Heute:"
-  st77xx,txtfull,60,115,1,white,,"[VAR#1] kWh"
-  st77xx,txtfull,2,125,1,white,,"PV Heute:"
-  st77xx,txtfull,60,125,1,white,,"[openDTU2#H20] kWh"
-  st77xx,txtfull,2,150,1,white,,%ip%
-  st77xx,txtfull,99,150,1,white,,%systm_hm_0%
+  st77xx,txtfull,2,105,1,white,black,"WR Limit:     "
+  st77xx,txtfull,60,105,1,white,black,"[openDTU2#limit_absolute] W   "
+  st77xx,txtfull,2,115,1,white,black,"WR Heute:"
+  st77xx,txtfull,60,115,1,white,black,"[VAR#1] kWh   "
+  st77xx,txtfull,2,125,1,white,black,"PV Heute:"
+  st77xx,txtfull,60,125,1,white,black,"[openDTU2#H20] kWh   "
+  st77xx,txtfull,2,150,1,white,black,%ip%
+  st77xx,txtfull,99,150,1,white,black,%systm_hm_0%
   timerSet,1,10
 endon
