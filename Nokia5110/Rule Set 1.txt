@@ -1,0 +1,18 @@
+On System#Boot do
+  lcd,clear
+  lcd,rot,0
+  LoopTimerSet,1,10
+endon
+On Rules#Timer=1 do
+  let,1,([openDTU2#yieldday]/1000)
+  lcd,txtfull,1,1,1,,,"EVU:"
+  lcd,txtfull,40,1,1,,,"[openDTU1#Netz]W   "
+  lcd,txtfull,1,9,1,,,WR:
+  lcd,txtfull,40,9,1,,,"[openDTU1#HM]W   "
+  lcd,txtfull,1,18,1,,,PV:
+  lcd,txtfull,40,18,1,,,"[openDTU1#PV]W   "
+  lcd,txtfull,1,27,1,,,Bat:
+  lcd,txtfull,40,27,1,,,"[openDTU1#Batt]V   "
+  lcd,txtfull,1,36,1,,,"Limit:"
+  lcd,txtfull,40,36,1,,,"[openDTU2#limit_absolute] W    "
+endon
