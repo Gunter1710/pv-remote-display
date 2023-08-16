@@ -5,51 +5,51 @@ On System#Boot do
 endon
 On Rules#Timer=1 do
   let,1,([openDTU2#yieldday]/1000)
-  ili9341,txtfull,2,22,2,white,black,EVU:
+  ili9341,txtfull,2,44,3,white,black,EVU:
  if [openDTU1#Netz] < -1000
-   ili9341,txtfull,55,22,2,green,black,"[openDTU1#Netz]W   "
-   ili9341,txtfull,2,1,2,white,green,"Balkonsolar"
+   ili9341,txtfull,110,44,3,green,black,"[openDTU1#Netz]W   "
+   ili9341,txtfull,2,1,3,white,green," Balkonsolar "
   elseif [openDTU1#Netz] < 100
-    ili9341,txtfull,2,1,2,white,Cyan,"Balkonsolar"
-    ili9341,txtfull,55,22,2,Cyan,black,"[openDTU1#Netz]W   "
+    ili9341,txtfull,2,1,3,white,Cyan," Balkonsolar "
+    ili9341,txtfull,110,44,3,Cyan,black,"[openDTU1#Netz]W   "
   else
-    ili9341,txtfull,2,1,2,white,red,"Balkonsolar"
-    ili9341,txtfull,55,22,2,red,black,"[openDTU1#Netz]W   "
+    ili9341,txtfull,2,1,3,white,red," Balkonsolar "
+    ili9341,txtfull,110,44,3,red,black,"[openDTU1#Netz]W   "
  endif
-  ili9341,txtfull,2,42,2,white,black,WR:
+  ili9341,txtfull,2,84,3,white,black,WR:
  if [openDTU1#HM] < 13
-    ili9341,txtfull,55,42,2,orange,black,"[openDTU1#HM]W   "
+    ili9341,txtfull,110,84,3,orange,black,"[openDTU1#HM]W   "
   elseif [openDTU1#HM] < 100
-    ili9341,txtfull,55,42,2,Cyan,black,"[openDTU1#HM]W   "
+    ili9341,txtfull,110,84,3,Cyan,black,"[openDTU1#HM]W   "
   else
-    ili9341,txtfull,55,42,2,green,black,"[openDTU1#HM]W   "
+    ili9341,txtfull,110,84,3,green,black,"[openDTU1#HM]W   "
  endif
-  ili9341,txtfull,2,62,2,white,black,PV:
+  ili9341,txtfull,2,124,3,white,black,PV:
  if [openDTU1#PV] < 13
-    ili9341,txtfull,55,62,2,red,black,"[openDTU1#PV]W   "
+    ili9341,txtfull,110,124,3,red,black,"[openDTU1#PV]W   "
   elseif [openDTU1#PV] < 250
-    ili9341,txtfull,55,62,2,Cyan,black,"[openDTU1#PV]W   "
+    ili9341,txtfull,110,124,3,Cyan,black,"[openDTU1#PV]W   "
   else
-    ili9341,txtfull,55,62,2,green,black,"[openDTU1#PV]W   "
+    ili9341,txtfull,110,124,3,green,black,"[openDTU1#PV]W   "
  endif
-  ili9341,txtfull,2,82,2,white,black,Bat:
+  ili9341,txtfull,2,164,3,white,black,Bat:
  if [openDTU1#Batt] < 25.6
-   ili9341,txtfull,55,82,2,red,black,"[openDTU1#Batt]V   "
+   ili9341,txtfull,110,164,3,red,black,"[openDTU1#Batt]V   "
  elseif [openDTU1#Batt] < 26.1
-    ili9341,txtfull,55,82,2,orange,black,"[openDTU1#Batt]V   "
+    ili9341,txtfull,110,164,3,orange,black,"[openDTU1#Batt]V   "
   elseif [openDTU1#Batt] < 27.2
-    ili9341,txtfull,55,82,2,Cyan,black,"[openDTU1#Batt]V   "
+    ili9341,txtfull,110,164,3,Cyan,black,"[openDTU1#Batt]V   "
   else
-    ili9341,txtfull,55,82,2,green,black,"[openDTU1#Batt]V   "
+    ili9341,txtfull,110,164,3,green,black,"[openDTU1#Batt]V   "
  endif
-  ili9341,txtfull,2,105,1,white,black,"WR Limit:"
-  ili9341,txtfull,60,105,1,white,black,"[openDTU2#limit_absolute] W    "
-  ili9341,txtfull,2,115,1,white,black,"Akku TOC:"
-  ili9341,txtfull,60,115,1,white,black,"[Dummy#TOC] %    "
-  ili9341,txtfull,2,125,1,white,black,"WR Heute:"
-  ili9341,txtfull,60,125,1,white,black,"[VAR#1] kWh    "
-  ili9341,txtfull,2,135,1,white,black,"PV Heute:"
-  ili9341,txtfull,60,135,1,white,black,"[openDTU2#H20] kWh    "
-  ili9341,txtfull,2,150,1,white,black,%ip%
-  ili9341,txtfull,99,150,1,white,black,%systm_hm_0%
+  ili9341,txtfull,2,210,2,white,black,"WR Limit:"
+  ili9341,txtfull,120,210,2,white,black,"[openDTU2#limit_absolute] W    "
+  ili9341,txtfull,2,230,2,white,black,"Akku TOC:"
+  ili9341,txtfull,120,230,2,white,black,"[Dummy#TOC] %    "
+  ili9341,txtfull,2,250,2,white,black,"WR Heute:"
+  ili9341,txtfull,120,250,2,white,black,"[VAR#1] kWh    "
+  ili9341,txtfull,2,270,2,white,black,"PV Heute:"
+  ili9341,txtfull,120,270,2,white,black,"[openDTU2#H20] kWh    "
+  ili9341,txtfull,2,300,2,white,black,%ip%
+  ili9341,txtfull,180,300,2,white,black,%systm_hm_0%
 endon
